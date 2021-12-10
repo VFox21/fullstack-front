@@ -1,0 +1,67 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo{
+    display: inline-block;
+    height: 200px;
+    width: 300px;
+}
+
+.titulo{
+    display: inline-block;
+    color: coral;
+    position: absolute;
+    left: 350px;
+    top: 65px;
+    font-size: 55px;
+}
+
+.subtitulo{
+    font-size: 25px;
+    color: rgb(92, 80, 255);
+    margin: 5px 5px 5px 5px;
+}
+
+.recuadro{
+    height: 25px;
+    padding: 1px 1px 1px 1px;
+}
+
+.datos_cliente{
+    background-color: #55ccff;
+    width: 850px;
+    margin: 5px 5px 5px 5px;
+    padding: 3px 3px 3px 3px;
+}
+
+.datos_pedido{
+    background-color: #40ccbb;
+    width: 850px;
+    margin: 5px 5px 5px 5px;
+    padding: 3px 3px 3px 3px;
+}
+
+label {
+    display: inline-block;
+    padding: 0px 0px 0px 40px;
+}
+
+input{
+    display: inline-block;
+    position: absolute;
+    left: 400px;
+}
+
+select{
+    display: inline-block;
+    position: absolute;
+    left: 400px;
+}
+
+.boton{
+    position: absolute;
+    left: 290px;
+    padding: 5px 5px 5px 5px;
+    margin-top: 10px;
+}
