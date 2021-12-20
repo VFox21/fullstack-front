@@ -1,4 +1,4 @@
-function check_pedido(){
+/*function check_pedido(){
 
     const data = new FormData();
     data.append('tamanho', document.getElementById("tamanho_pizza").value);
@@ -10,16 +10,26 @@ function check_pedido(){
 
         }).then(
             async response => {  var_respuesta.innerHTML = await response.text(); }
-            /*console.log("La respuesta es: " + var_respuesta.innerHTML),
-            console.log("Respuesta:" +  response.text());*/
-            /*document.getElementById("alerta_pedido").innerHTML = "Funciona!!";*/
         ).catch(function(err) {
 
             console.log(err);
             var_respuesta.innerHTML = "Intentalo más tarde!";
-        /* gestión del error, ¿que hacemos si falla la invocación? */
         });
 }
+*/
+
+$("#tamanho_pizza").on("change", function() {
+    console.log(this.value);
+
+    $.ajax({
+        type:"POST",
+        url: "http://localhost:5000/checksize",
+        data: {tamanho: this.value},
+        success: function(result){
+            $("#alerta_pedido").html(result);
+        }
+    });
+});
 
 function validacion_campos_vacios(var_campo){
     if (var_campo == ""){
