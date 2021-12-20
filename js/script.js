@@ -1,3 +1,26 @@
+function check_pedido(){
+
+    const data = new FormData();
+    data.append('tamanho', document.getElementById("tamanho_pizza").value);
+    let var_respuesta = document.getElementById("alerta_pedido")
+
+    fetch("http://localhost:5000/checksize", {
+        method: "post",
+        body: data
+
+        }).then(
+            async response => {  var_respuesta.innerHTML = await response.text(); }
+            /*console.log("La respuesta es: " + var_respuesta.innerHTML),
+            console.log("Respuesta:" +  response.text());*/
+            /*document.getElementById("alerta_pedido").innerHTML = "Funciona!!";*/
+        ).catch(function(err) {
+
+            console.log(err);
+            var_respuesta.innerHTML = "Intentalo más tarde!";
+        /* gestión del error, ¿que hacemos si falla la invocación? */
+        });
+}
+
 function validacion_campos_vacios(var_campo){
     if (var_campo == ""){
         return true;

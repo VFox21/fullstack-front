@@ -65,3 +65,14 @@ select{
     padding: 5px 5px 5px 5px;
     margin-top: 10px;
 }
+
+.pizza_size{
+    display: inline-block;
+    width: 350px;
+}
+
+.disponibilidad{
+    display: inline-block;
+    position: absolute;
+    left: 500px;
+}
